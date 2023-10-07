@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 3.3.7 Card Carousel Example</title>
+  <!-- Add Bootstrap CSS and JavaScript -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Custom styles for the carousel */
+    .carousel-inner .item {
+      background-color: #f5f5f5;
+    }
+
+    /* Custom CSS to style the cards in each slide */
+    .carousel-inner .multi-item-carousel {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .carousel-inner .multi-item-carousel .item {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+      padding: 0 10px;
+    }
+
+    /* Add responsive styles for smaller screens */
+    @media (max-width: 768px) {
+      .carousel-inner .multi-item-carousel .item {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center">Card Carousel Example</h1>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <!-- Add more indicators as needed -->
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <!-- Slide 1 with 3 cards -->
+      <div class="item active">
+        <div class="multi-item-carousel">
+          <!-- Card 1 -->
+          <div class="item">
+            <div class="card">
+              <div class="card-header">Card 1</div>
+              <div class="card-body">
+                <h4 class="card-title">Card Title 1</h4>
+                <p class="card-text">This is some text for card 1.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="item">
+            <div class="card">
+              <div class="card-header">Card 2</div>
+              <div class="card-body">
+                <h4 class="card-title">Card Title 2</h4>
+                <p class="card-text">This is some text for card 2.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="item">
+            <div class="card">
+              <div class="card-header">Card 3</div>
+              <div class="card-body">
+                <h4 class="card-title">Card Title 3</h4>
+                <p class="card-text">This is some text for card 3.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 with 3 cards -->     
+      <!-- Add more slides with 3 cards each as needed -->
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
